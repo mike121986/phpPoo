@@ -8,18 +8,18 @@
          * a la vista principal, si es diferente que home este sera
          * mostrara la vista correspondiente
          */
-        function getView($controller,$view)
+        function getView($controller,$view,$data="")
         {
             /* obtenemos la cl */
             $controller = get_class($controller);
 
             if($controller == "Home")
             {
-                $view = VIEWS.$view.".php";
+                $view = "views/".$view.".php";
             }
             else
             {
-                $view = VIEWS.$controller."/".$view.".php";
+                $view = "views/".$controller."/".$view.".php";
             }
 
             require_once($view);
