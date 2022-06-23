@@ -22,29 +22,5 @@ if (!empty($arrUrl[2])) {
     }
 }
 
-spl_autoload_register(function ($class) {
-    if (file_exists(LIBS . 'CORE/' . $class . ".php")) {
-        require_once(LIBS . 'CORE/' . $class . ".php");
-    }
-});
-
-//LOAd
-/** concatenamos el controlador y verificamos que exista en la carpeta contriollers y le concatenamos el .php
- * si es que exsite el archivo que se esta enviando por la variable $controllerFile este hara uan instancia 
- * a la clase que debe tener el mismo nombre que el archivo, ahora verificamos la existencia del metodo
- * que debe exister en la clase, si es que 3xiste este ya hara la isntruccions que tiene l archivo
- * */
-
-$controllerFile = "Controllers/" . $controller . ".php";
-if (file_exists($controllerFile)) {
-    require_once($controllerFile);
-    $controller = new $controller();
-
-    if (method_exists($controller, $method)) {
-        $controller->{$method}($params);
-    } else {
-        echo "No existe EL metodo";
-    }
-} else {
-    echo "No existe Controlador";
-}
+require_once("Libraries/Core/Autoload.php");
+require_once("Libraries/Core/Load.php");

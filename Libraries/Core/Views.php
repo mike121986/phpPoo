@@ -21,5 +21,7 @@
             {
                 $view = VIEWS.$controller."/".$view.".php";
             }
+
+            require_once($view);
         }
     }
