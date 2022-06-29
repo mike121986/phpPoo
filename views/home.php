@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda virtual</title>
+    <title><?=$data["tag_page"];?></title>
 </head>
 <body>
-    <h1>Bienvenido a mi pagina web</h1>
+    <section id="<?=$data["page_id"];?>"></section>
+    <h1><?=$data["page_title"];?></h1>
+    <p><?=$data["page_content"];?></p>
 </body>
 </html>
