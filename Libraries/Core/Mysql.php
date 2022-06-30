@@ -87,7 +87,7 @@ class Mysql extends Conexion
     {
         $this->strquery = $query;
         $result = $this->conexion->prepare($this->strquery);
-        $result->execute();
-        return $result;
+        $del = $result->execute();
+        return $del;
     }
 }
