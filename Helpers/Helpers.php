@@ -3,10 +3,35 @@
 /**
  * Retorna la url que se han guardad en el archivo config
  */
-    function base_url()
-    {
-        return BASE_URL;
-    }
+function base_url()
+{
+    return BASE_URL;
+}
+
+function media()
+{
+    return BASE_URL."Assets/";
+}
+
+/**
+ * esta funcion integra el header del sistema
+ */
+function headerAdmin($data="")
+{
+    $view_header = "views/Template/Header_admin.php";
+    require_once($view_header);
+}
+
+/**
+ * esta funcion integra el footer del sistema
+ */
+function footerAdmin($data="")
+{
+    $view_footer = "views/Template/Footer_admin.php";
+    
+    require_once($view_footer);
+
+}
 
 /**
  * muestra la informacion de los array de forma formateada

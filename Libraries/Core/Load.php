@@ -5,7 +5,7 @@
  * a la clase que debe tener el mismo nombre que el archivo, ahora verificamos la existencia del metodo
  * que debe exister en la clase, si es que 3xiste este ya hara la isntruccions que tiene l archivo
  * */
-
+$controller = ucwords($controller);
 $controllerFile = "Controllers/" . $controller . ".php";
 if (file_exists($controllerFile)) {
     require_once($controllerFile);
