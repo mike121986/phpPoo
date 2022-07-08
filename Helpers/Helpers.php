@@ -43,7 +43,14 @@ function dep($data)
     $format  = print_r('</pre>');
     return $format;
 }
-
+/**
+ * este helper nos ayuda a mostra los modal del sistema
+ */
+function getModal(string $nameModal, $data)
+{
+    $view_modal = "views/Template/Modals/{$nameModal}.php";
+    require_once $view_modal;        
+}
 /**
  * function para limpiar cadena entre palabras
  * esta funcion sirve para evitar la INJECTION_SQL
